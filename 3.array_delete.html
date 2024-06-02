@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array delete</title>
+    <script>
+      function removeElement() {
+        let data = [10, 20, 30, 40, 50];
+        let position = parseInt(document.querySelector("#indexVal").value);
+        for (let i = position; i < data.length; i++) {
+          data[i] = data[i + 1];
+        }
+        data.length = data.length - 1;
+        console.warn(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      id="indexVal"
+      type="text"
+      placeholder="enter index value to delete..."
+    />
+    <button onclick="removeElement()">Remove Element</button>
+  </body>
+</html>
