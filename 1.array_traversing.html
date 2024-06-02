@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA In JS</title>
+  </head>
+  <body>
+    <input type="text" id="elementGetting" />
+    <button onclick="ESearch()">Element Searching</button>
+
+    <script>
+      let data = [1, 45, 23, 78, 12, 23, 67, 33, 56, 69];
+      // for (let i = 0; i < data.length; i++) {
+      //   document.write(`at ${i} index there is  ${data[i]} element <br>`);
+      // }
+
+      let a = 6;
+      document.write(data[a]);
+
+      function ESearch() {
+        let inputEl = document.querySelector("#elementGetting").value;
+        if (
+          inputEl < data.length &&
+          typeof parseInt(inputEl) === "number" &&
+          inputEl >= 0
+        ) {
+          alert(data[inputEl]);
+        } else {
+          alert("invalid index no");
+        }
+      }
+    </script>
+  </body>
+</html>
